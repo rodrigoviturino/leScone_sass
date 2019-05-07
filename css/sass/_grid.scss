@@ -1,0 +1,75 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: bisque;
+    &::after, &::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.grid-3 {
+    width: calc(25% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    background: rgba(0,0,0,.5);
+    float: left;
+    color: #fff;
+}
+
+// Variaveis do GRID
+$cols: 12;
+$gutter: 20px;
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+// Box-Sizing
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+// Mixins de Media-Queries
+@mixin device($size) {
+    @if $size == l {
+        @media screen and (min-width: #{$l-device}) {
+            @content;
+        }
+    }
+
+    @else if $size == m {
+        @media screen and (min-width: #{$m-device}) and (max-width: #{$l-device} - 1) {
+            @content;
+        }
+    }
+
+    @else if $size == s {
+        @media screen and (max-width: #{$m-device} - 1) {
+            @content;
+        }
+    }
+}
+
+
+// Função do GRID
+
+@function grid($col, $offset: false) {
+    $width: $col / $cols * 100 + 0;
+    $result: calc(#{$width} - #{$gutter});
+
+    @if $offset == offset {
+        $gutter: $gutter / 2;
+        $result: calc(#{$width} + #{$gutter});
+    }
+    @return $result;
+}
+
+.introducao {
+    width: grid(2, offset);
+}
+
+
+// Formula do GRID
+// Isso seria para o GRID
