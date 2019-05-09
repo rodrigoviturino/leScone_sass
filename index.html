@@ -3,21 +3,92 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="Le Scone - Restaurante">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|PT+Mono" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 	<title>Le Scone</title>
 </head>
 <body>
 	
-	<!-- <div class="container">
-		<div class="grid-3">Teste 01</div>
-		<div class="grid-3">Teste 02</div>
-		<div class="grid-3">Teste 03</div>
-		<div class="grid-3">Teste 04</div>
-	</div> -->
+<main class="container intro">
+	<div class="grid-5">
+		<img src="img/lescone.png" alt="Logo" class="logo">
+		<div class="intro-info">
+			<p>De Seg à Sab. <span class="aberto">Das 07:00 ás 18:00</span></p>
+			<p>Praia de Botafogo, 300<br>Rio de Janeiro - RJ</p>
+		</div>
+		<p class="intro-telefone">+55 021 2412-1000</p>
+	</div>
 
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nam cupiditate sed porro magnam error eaque labore officiis iure sint et, quibusdam voluptatem soluta possimus totam unde quisquam numquam.</p>
+	<div class="grid-7">
+		<img src="img/foto.jpg" alt="Foto de Le Scone">
+	</div>
+</main>
+
+<section class="container">
+	<h1 class="grid-4 titulo">Menu</h1>
+	<div class="grid-7 offset-1">
+		<div class="menu-item">
+			<img src="img/prato-1.png" alt="Foto Prato 1">
+			<h2>Entradas</h2>
+			<ul>
+				<li><span>R$1,70</span>Ovos Mexidos</li>
+				<li><span>R$2,70</span>Scones de Frutas</li>
+				<li><span>R$5,70</span>Joelho de Queijo</li>
+				<li><span>R$6,70</span>Presunto Cozido</li>
+				<li><span>R$4,70</span>Cozinha de Frango</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="grid-7 offset-5">
+		<div class="menu-item">
+			<img src="img/prato-2.png" alt="Foto Prato 2">
+			<h2>Pratos Principais</h2>
+			<ul>
+				<li><span>R$1,70</span>Ovos Mexidos</li>
+				<li><span>R$2,70</span>Scones de Frutas</li>
+				<li><span>R$5,70</span>Joelho de Queijo</li>
+				<li><span>R$6,70</span>Presunto Cozido</li>
+				<li><span>R$4,70</span>Cozinha de Frango</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="container contato">
+	<h1 class="grid-4 titulo">Contato</h1>
+	<div class="grid-7 offset-1">
+		<form action="#">	
+			<label for="">Nome</label>
+			<input type="text">
+			<div class="row">
+				<div class="grid-7">
+					<label for="">E-mail</label>
+					<input type="text">
+				</div>
+				<div class="grid-5">
+					<label for="">Telefone</label>
+					<input type="text">
+				</div>
+			</div>
+			<label for="">Mensagem</label>
+			<textarea></textarea>
+			<input type="button" class="button" value="Enviar">
+		</form>
+
+		<div class="contato-info">
+			<p>contato@lescone.com ////</p>
+			<p>+55 021 2950-5455 ////</p>
+		</div>
+		<a href="#" class="contato-mapa">
+			<img src="img/map.png" alt="Como chegar em Le Scone">
+		</a>
+	</div>
+
+</section>
 
 </body>
 </html>
