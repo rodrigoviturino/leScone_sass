@@ -1,0 +1,34 @@
+body {
+    background-color: $bege-claro;
+    border: solid 10px $bege-medio;
+    color: $cinza;
+    @include device(s){
+        border: none;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    @include tipo-1(18px);
+    @include device(s){
+        margin-bottom: 40px;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 70%;
+        background-color: $cinza;
+        height: 2px;
+        margin: 0 40px;
+        @include device(m) {
+            width: 60%;
+        }
+    }
+}

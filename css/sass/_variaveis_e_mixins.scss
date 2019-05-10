@@ -1,0 +1,37 @@
+// Cores
+$bege-claro: #edece4;
+$bege-medio: #cbc6b9;
+$bege-escuro: #988c77;
+$verde: #1ab912;
+$cinza: #2a2426;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa:400,700|PT+Mono');
+$fonte-1: 'PT Mono', monospace;
+$fonte-2: 'Aref Ruqaa', serif;
+
+// Função de CONVERTER PX to EM
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto + em;
+}
+
+// Mixins Tipografia
+@mixin tipo-1($size){
+    font-family: $fonte-1;
+    @if $size == 18 {
+        font-size: em(18);
+        line-height: em(30,18);
+    }
+}
+
+@mixin tipo-2($size) {
+    font-family: $fonte-2;
+    @if $size == 18 {
+        font-size: em(18);
+        line-height: (30,18);
+    }
+    @else if $size == 24 {
+        font-size: em(24);
+        line-height: (30,24);
+    }
+}
